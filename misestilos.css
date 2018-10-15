@@ -1,32 +1,68 @@
+
 *{
 	margin:0px 0px;
 	padding: 0px 0px;
-	border: 0px solid #000000;
-}
+	border: 1px solid #000000;
+	}
 a{
 	text-decoration: none;
 	text-decoration-color: #000000;
 }
-#cabecera{					/*Esta es la parte de la cabecera, el color el tamaño y el tipo de letra*/
+header, section, footer, aside,nav,
+article, figure, figcaption,
+hgroup{
 	display: flex;
+	flex-wrap: wrap;
+}
+
+#app{
+}
+
+#cabecera{
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	height: 70px;
 	width: 100%;
+	height: 10%;
 	background: #1976D2;
-	padding: 5px 15px;
+	padding: 5px 15px;	
 	align-content: center;
 	font: bold 14px verdana, sans-serif;
 	align-items: center;
 }
-#buscar{				/*Este es la parte del buscador fondo, tipo de letra tamaño*/
+button[name*="b"]{			/*esto es para el boton de la pinche hamburguesa*/
+	flex-shrink: 0;
+	height: 57%;
+	padding: 0px;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+}
+#hamburguesa{
+	width: 2.9%;
+	margin-left: 10px;
+	background-image: url("https://trello-attachments.s3.amazonaws.com/5ba023426a260a1d5f1e9f38/5bbd678fbacffa7056a6de88/5c646c1a6a4aa0ad092075b448fc1315/icons8-men%C3%BA-filled-500.png");
+	background-size: cover;
+	background-repeat: center;
+}
+.logo{						/*Este sera el tamaño del Logo de la pagina*/
+	width: 19%;
+	height: 100%;
 	flex-shrink: 3;
+}
+#logo{
+	width: 100%;
+	height: 100%;
+}
+.buscar{				/*Modifica la caja donde esta todo el buscador*/
+	flex-shrink: 3;
+	width: 30%;
+	height: 57%;
+}
+#buscar{
 	text-align: left;
-	-moz-transform: translateY(-10px);
-	-webkit-transform: translateY(-10px);
-	width: 370px;
-	height: 40px;
+	width: 90%;
+	height: 100%;
 	color: white;
 	font: bold 15px verdana, sans-serif;
 	background-color: transparent;
@@ -34,39 +70,15 @@ a{
 	border-width: 0px 0px 3px 0px;/*	*/
 	border-color: #0D47A1;
 }
-.logo{						/*Este sera el tamaño del Logo de la pagina*/
-	width: 270px;
-	height: 70px;
-	margin-top: 30px;
-	flex-shrink: 3;
-}
-.icono{						/*Este es el icono que aparece a la derecha*/
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-	background-color: transparent;
-}
-button[name*="b"]{			/*esto es para el boton de la pinche hamburguesa*/
-	flex-shrink: 0;
-	width: 40px;
-	height: 40px;
-	padding: 0px;
-	background-color: transparent;
-	outline: none;
-	cursor: pointer;
-}
-#hamburguesa{
-	margin-left: 10px;
-	background-image: url("https://trello-attachments.s3.amazonaws.com/5ba023426a260a1d5f1e9f38/5bbd678fbacffa7056a6de88/5c646c1a6a4aa0ad092075b448fc1315/icons8-men%C3%BA-filled-500.png");
-	background-size: cover;
-	background-repeat: center;
-}
 #lupa{
+	width: 10%;
+	height: 100%;
 	background-size: cover;
 	background-repeat: center;
 	background-image: url("https://trello-attachments.s3.amazonaws.com/5ba023426a260a1d5f1e9f38/5bbd678fbacffa7056a6de88/28e0cd05cdff8fb815373638d7f6ee59/icons8-b%C3%BAsqueda-filled-500.png");
 }
 #botonesN{					/*Estos son los botones de Registro e Inicio de sesion*/
+	flex-shrink: 3;
 	box-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
 	border-radius: 15%;
 	cursor: pointer;
@@ -75,7 +87,18 @@ button[name*="b"]{			/*esto es para el boton de la pinche hamburguesa*/
 	padding: 5px;
 	background-color: #1565c0;
 	border-width: 1px;
-	border-color: #0d47a1;
+	border-color: #0d47a1
+}
+.icono{						/*Modifica la caja del icono que aparece a la derecha*/
+	flex-shrink: 3;
+	border-radius: 50%;
+	width: 4.3%; /*60px*/
+	height: 85%;
+	background-color: transparent;
+}
+#icono{
+	width: 100%;
+	height: 100%;
 }
 input:focus{						/*Esto es para cuando se da click en un boton no se marque un cuadro alrededor*/
 	outline: none;
@@ -90,46 +113,28 @@ input:focus{						/*Esto es para cuando se da click en un boton no se marque un 
 ::-ms-input-placeholder{
 	color: white;
 }
-
 /*/////////////////////////////////////////////////////////////////////////Hasta aqui es la cabecera////////////////////////////////////////*/
 
-li{
-	border-radius: 10px;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	box-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
-}
-#centro{
-	display: flex;
+#centro{		/*caja con el banner, mapa, video y recomendados*/
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: 5px;
-	margin-left: 0px;
+	margin: 0.0% 0.0%;
+	height: 89%;
+	width: 100%;
 }
-#centro1{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	margin-left: 0px;
-}
-#seccion-banner{
-	display: flex;
+#seccion-banner{	/*caja del banner*/
 	flex-direction: row;
 	flex-wrap: wrap;
 	visibility: visible;
-	height: 590px;
-	width: 250px;
-	padding: 0px 5px 0px 0px;
+	height: 100%;
+	width: 18.301%;
+	padding: 0px 0.37% 0px 0px;
 }
 
 #banner{
-	background: -webkit-linear-gradient(top, #A4A4A4 50%, #6E6E6E 90%);
-	padding: 15px 10px 15px 10px;
+	padding: 1.1% 0.732% 1.1% 0.732%;
 	float: left;
-	height: 565px;
-	width: 30px;
-	max-width: 250px;
-	text-overflow: initial;
+	height: 100%;
 	visibility: hidden; 					/*Quitar para mostrar la raya gris*/
 }
 #ocultar{
@@ -137,105 +142,86 @@ li{
 }
 #banner1{
 	background-color: #A4A4A4;
-	padding: 15px 10px 15px 10px;
+	padding: 1.1% 0.732% 1.1% 0.732%;
 	float: left;
 	text-overflow: initial;
 	-webkit-animation: banner 1.5s;
 	animation: banner 1.5s;
-	width: 250px;
-	height: 590px;
-	visibility: visible;					/*quitar para mostrar la raya gris*/
+	width: 100%;
+	height: 100%;
+	visibility: visible;
 }
-
 @keyframes banner{
-	0%{width: 30px}
-	100%{width: 250px}
+	0%{width: 0%}
+	100%{width: 100%}
 }
 #mostrar{
 	visibility: visible;
 	transition: visibility 3s;
 }
-
+li{
+	border-radius: 30%/50%;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	box-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
+}
 #publicidad1{
+	flex-wrap: wrap;
 	padding: 5px;
-	max-width: 200px;
-	max-height: 300px;
+	width: 80%;
+	height:	48%;
 	visibility: visible;
 }
-
+#publicidad2{
+	max-width: 100%;
+	max-height:	100%;
+}
+#centro1{
+	width: 81%;
+	height: 100%;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
 #mapa{
 	flex-shrink: 3;
-	width: 1085px;
-	height: 300px;
+	width: 100%;
+	height: 48%;
+}
+#centro2{
+	width: 100%;
+	height: 51%;
+	flex-direction: row;
+	flex-wrap: wrap;	
 }
 #recomendados{
-	display: flex;
-	margin-left: 0px;
+	justify-content: space-between;	
 	flex-shrink: 3;
-	width: 800px;
-	height: auto;
-	padding-left: 0%;
-
+	width: 71.7%;
+	height: 100%;
 }
+#tarjetas{
+	width: 32%;
+	height: 100%;
+}
+
 #video{
-	padding: 0px 0px 0px 10px;
-	height: 250px;
-	width: 270px;
+	padding: 0px 0px 0px 0.9%;
+	height: 76%;
+	width: 28px;
 	flex-shrink: 3;
 }
 #pie{
 	background-color: black;
 	width: 100%;
-	height: 35px;
+	height: 5%;
 	position: fixed;
-  bottom: 0px;
+  	bottom: 0px;
 }
 #anunciate{
-	margin-top: 2.5px;
-	margin-right: 50px;
 	float: right;
-	height: 30px;
+	height: 85.7%;
 	cursor: pointer;
 	outline: none;
 	padding: 5px;
 	border-width: 1px;
-	align-items: right;
-}
-
-.tarjetas{
-	margin-left: 0px;
-	margin-right: 3%;
-	width: 250px;
-	background-color: #cccccc;
-	font: bold 14px verdana, sans-serif;
-	justify-content: space-between;
-  flex-direction: column;
-  height: auto;
-  display: flex;
-	box-shadow: rgba(0,0,0,0.5) 3px 3px 5px;
-
-
-}
-#recom1{
-	width: 100%;
-	height: 50%;
-}
-
-#descripcion{
-	width: 100%;
-	height: auto;
-	border: 0px solid #000000;
-	bottom: 0;
-	text-align: center;
-}
-.tarjetas #bt_holder{
-	text-decoration-color: #00ccf1;
-	text-align: center;
-	width: 100%;
-	height: 10%;
-	border: 0px solid #000000;
-	background-color: #00ccf1;
-}
-.bt{
-	background-color: #00CCF1;
 }
